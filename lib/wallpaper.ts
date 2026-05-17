@@ -1,14 +1,14 @@
 import type { DeviceTier } from "@/hooks/use-device-tier";
 
-/** Gato en el pasto (horizontal) — solo escritorio Mac (≥1024px). */
-export const WALLPAPER_DESKTOP_URL = "/wallpaper-cat.png";
+/** Eat / sleep / code / repeat — Mac (≥1024px) e iPad (768–1023px). */
+export const WALLPAPER_DESKTOP_URL = "/wallpaper-desktop.png";
 
-/** Foto vertical del gato — iPad y iPhone (<1024px). */
-export const WALLPAPER_TOUCH_URL = "/wallpaper-touch.png";
+/** Icono </> — iPhone (≤767px). */
+export const WALLPAPER_MOBILE_URL = "/wallpaper-mobile.png";
 
 /** @deprecated Usar `wallpaperUrlForTier` o `WALLPAPER_DESKTOP_URL`. */
 export const WALLPAPER_URL = WALLPAPER_DESKTOP_URL;
 
 export function wallpaperUrlForTier(tier: DeviceTier): string {
-  return tier === "desktop" ? WALLPAPER_DESKTOP_URL : WALLPAPER_TOUCH_URL;
+  return tier === "mobile" ? WALLPAPER_MOBILE_URL : WALLPAPER_DESKTOP_URL;
 }
